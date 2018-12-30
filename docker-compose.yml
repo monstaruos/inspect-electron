@@ -1,0 +1,14 @@
+version: "3"
+services:
+
+  app:
+    image: electron-centos7
+    ports:
+      - "5900:5900"
+    volumes:
+      - .:/home/limited/app
+      - node_modules:/home/limited/app/node_modules
+
+volumes:
+  node_modules:
+    driver: local
